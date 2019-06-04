@@ -17,6 +17,7 @@
       echo $e->getMessage();
     }
     ?>
+    
    <div class="calendario">
         <?php
           $calendario = array();
