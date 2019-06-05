@@ -897,6 +897,13 @@ div.resumen input {
     display: none;
 }
 /**Calendario**/
+div.calendario h3 {
+    background-color: #fe4918;
+    clear: both;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}    
 div.calendario::after{
     clear: both;
     display: block;

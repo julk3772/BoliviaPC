@@ -63,7 +63,7 @@
           <nav class="navegacion-principal clearfix">
               <a href="conferencia.php">Pc a medida</a>
               <a href="calendario.php">Workstation</a>
-              <a href="#">Pc Gamer</a>
+              <a href="invitados.php">Pc Gamer</a>
               <a href="contacto.php">Contacto</a>
           </nav>
       </div><!--.contenedor-->
