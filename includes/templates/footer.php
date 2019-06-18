@@ -34,6 +34,7 @@
   <script src="js/jquery.animateNumber.js"></script>
   <script src="js/jquery.countdown.js"></script>
   <script src="js/jquery.lettering.js"></script>
+  <script src="js/jquery.colorbox-min.js"></script>
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
   <script src="js/main.js"></script>
