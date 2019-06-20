@@ -54,55 +54,7 @@
         </div><!--contenedor-->
       </div><!--contenido-programa-->
     </section><!--programa-->
-
-
-    <section class="inivtados contenedor seccion">
-      <h2>Nuestro Personal</h2>
-      <ul class="lista-invitados clearfix">
-        <li>
-          <div class="invitado">
-            <img src="img/invitado1.jpg" alt="imagen invitado">
-            <p>Rafael Bautista</p>
-          </div>
-        </li>
-
-        <li>
-          <div class="invitado">
-            <img src="img/invitado2.jpg" alt="imagen invitado">
-            <p>Shary Herrera</p>
-          </div>
-        </li>
-
-        <li>
-          <div class="invitado">
-            <img src="img/invitado3.jpg" alt="imagen invitado">
-            <p>Gregorio Sanchez</p>
-          </div>
-        </li>
-
-        <li>
-          <div class="invitado">
-            <img src="img/invitado4.jpg" alt="imagen invitado">
-            <p>Monica Velasco</p>
-          </div>
-        </li>
-
-        <li>
-          <div class="invitado">
-            <img src="img/invitado5.jpg" alt="imagen invitado">
-            <p>Ronald Hernandes</p>
-          </div>
-        </li>
-
-        <li>
-          <div class="invitado">
-            <img src="img/invitado6.jpg" alt="imagen invitado">
-            <p>Evidalia Mamani</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-
+      <?php include_once 'includes/templates/invitados.php'; ?>   
     <div class="contador parallax">
       <div class="contenedor">
         <ul class="resumen-evento clearfix">

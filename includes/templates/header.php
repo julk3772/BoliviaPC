@@ -14,7 +14,15 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/colorbox.css">
+  <?php 
+    $archivo = basename($_SERVER['PHP_SELF']);
+    $pagina = str_replace(".php","",$archivo);
+    if($pagina == 'invitados' || $pagina == 'index'){
+      echo '<link rel="stylesheet" href="css/colorbox.css">';
+    }else if($pagina == 'conferencia'){
+      echo '<link rel="stylesheet" href="css/lightbox.css">';
+    }
+  ?>  
   <link rel="stylesheet" href="css/fontawesome.min.css">
   <link rel="stylesheet" href="css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|PT+Sans" rel="stylesheet">
@@ -39,8 +47,8 @@
             </nav>
             <div class="datos-contacto">
               <div class="clearfix">
-                  <p class="direccion"><i class="fas fa-map-marker"></i>Calle Zoylo Flores Local 10PB</p>
-                  <p class="ciudad"><i class="fas fa-flag"></i>La Paz, BO</p>
+                  <p class="direccion"><i class="fas fa-map-marker"></i>Calle Elouterio Flores Local 10PB</p>
+                  <p class="ciudad"><i class="fas fa-flag"></i>Oruro, BO</p>
               </div>
               <h1 class="nombre-sitio">Barbarian Nerd</h1>
               <p class="slogan">El mejor lugar para armar tu <span>PC Gamer</span></p>
