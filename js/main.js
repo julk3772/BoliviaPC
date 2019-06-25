@@ -142,6 +142,10 @@
 $(function(){
     //Lettering
     $('.nombre-sitio').lettering();
+    //Agregar clase a menu OjO poner el texto del titulo del enlace
+    $('body.conferencia .navegacion-principal a:contains("Pc a medida")').addClass('activo');
+    $('body.calendario .navegacion-principal a:contains("Workstation")').addClass('activo');
+    $('body.invitados .navegacion-principal a:contains("Pc Gamer")').addClass('activo');
     //Menu fijo
     var windowHeigth = $(window).height();
     var barraAltura = $('.barra').innerHeight();
