@@ -83,7 +83,7 @@
                         <p><i class="fa fa-user" aria-hidden="true"></i><?php echo $evento['nombre_invitado'] . "" . $evento['apellido_invitado']; ?></p>
                       </div>
                     <?php if($i % 2 == 1): ?>  
-                        <a href="#" class="button float-right">Ver todos</a>
+                        <a href="calendario.php" class="button float-right">Ver todos</a>
                       </div><!--Talleres-->
                     <?php endif;?>              
                     <?php  $i++; ?>    
