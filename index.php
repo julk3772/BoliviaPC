@@ -16,11 +16,23 @@
       <div class="contenido-programa">
         <div class="contenedor">
           <div class="programa-evento">
-              <h2>programa del evento</h2>
+              <h2>Programa del Evento</h2>
+              <?php 
+                try{
+                  require_once('includes/funciones/bd_conexion.php');
+                  $sql = "SELECT * FROM categoria_evento ";
+                  $resultado = $conn->query($sql);
+                } catch (Exception $e){
+                  $error = $e->getMessage();
+                }
+              ?>
               <nav class="menu-programa">
-                <a href="#oficina"><i class="fas fa-tv"></i>PC Oficina</a>
-                <a href="#gamer"><i class="fas fa-tv"></i>PC Gamer</a>
-                <a href="#laptop"><i class="fas fa-tv"></i>Laptop</a>
+                <?php while($cat = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
+                  <?php $categoria = $cat['cat_evento']; ?>
+                    <a href="#<?php echo strtolower($categoria) ?>">
+                      <i class="fa <?php echo $cat['icono'] ?>" aria-hidden="true"></i>
+                  <?php echo $categoria ?></a>                        
+                <?php } ?>
               </nav>
               <div id="oficina" class="info-curso ocultar clearfix">
                   <div class="detalle-equipo">
