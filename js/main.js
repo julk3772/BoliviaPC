@@ -36,25 +36,22 @@
         var camisas = document.getElementById('camisa_evento');
         var etiquetas = document.getElementById('etiquetas');
         
-        if(document.getElementById('calcular')) {
+        botonRegistro.disabled = true;
 
-      
-
-        calcular.addEventListener('click', calcularMontos);
+        if(document.getElementById('calcular')) {    
+            calcular.addEventListener('click', calcularMontos);
 
         //solo funciona por fuera
         //pase_dia.addEventListener('blur', mostrarDias);
         //pase_dosdias.addEventListener('blur', mostrarDias);
         //pase_completo.addEventListener('blur', mostrarDias);
-
-        pase_dia.addEventListener('change', mostrarDias);
-        pase_dosdias.addEventListener('change', mostrarDias);
-        pase_completo.addEventListener('change', mostrarDias);
-
-        nombre.addEventListener('blur', validarCampos);
-        apellido.addEventListener('blur', validarCampos);
-        email.addEventListener('blur', validarCampos);
-        email.addEventListener('blur', validarMail);
+            pase_dia.addEventListener('change', mostrarDias);
+            pase_dosdias.addEventListener('change', mostrarDias);
+            pase_completo.addEventListener('change', mostrarDias);
+            nombre.addEventListener('blur', validarCampos);
+            apellido.addEventListener('blur', validarCampos);
+            email.addEventListener('blur', validarCampos);
+            email.addEventListener('blur', validarMail);
 
         function validarCampos(){
             if(this.value == ''){
@@ -115,6 +112,8 @@
                     lista_productos.innerHTML += listadoProductos[i] + '<br/>';                   
                 }
                 suma.innerHTML = "$ " + totalPagar.toFixed(2);
+                botonRegistro.disabled = false;
+                document.getElementById('total_pedido').value = totalPagar;
             }
  
         }
