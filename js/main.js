@@ -98,7 +98,7 @@
             for (var i = 0; i < listadoProductos.length; i++) {
               lista_productos.innerHTML += listadoProductos[i] + '<br>';
             }   
-            suma.innerHTML = totalPagar.toFixed(2) + ' €';
+            suma.innerHTML = totalPagar.toFixed(2) + ' Bs';
           }
         }   
         function mostrarDias() {
