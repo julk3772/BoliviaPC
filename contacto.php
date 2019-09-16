@@ -32,7 +32,8 @@
                       </ul>
                       <div class="orden">
                         <label for="pase_dia">Boletos Deseados</label>
-                        <input type="number" min="0" id="pase_dia" size="3" name="boletos[]" placeholder="0">
+                        <input type="number" min="0" id="pase_dia" size="3" name="boletos[un_dia][cantidad]" placeholder="0">
+                        <input type="hidden" value="300" name="boletos[un_dia][precio]">
                       </div>
                     </div>
                   </li>
@@ -49,7 +50,8 @@
                       </ul>
                       <div class="orden">
                         <label for="pase_completo">Boletos Deseados</label>
-                        <input type="number" min="0" id="pase_completo" size="3" name="boletos[]" placeholder="0">
+                        <input type="number" min="0" id="pase_completo" size="3" name="boletos[completo][cantidad]" placeholder="0">
+                        <input type="hidden" value="500" name="boletos[completo][precio]">
                       </div>
                     </div>
                   </li>
@@ -66,7 +68,8 @@
                       </ul>
                       <div class="orden">
                         <label for="pase_dosdias">Boletos Deseados</label>
-                        <input type="number" min="0" id="pase_dosdias" size="3" name="boletos[]" placeholder="0">
+                        <input type="number" min="0" id="pase_dosdias" size="3" name="boletos[2dias][cantidad]" placeholder="0">
+                        <input type="hidden" value="800" name="boletos[2dias][precio]">
                       </div>
                     </div>
                   </li>
@@ -150,11 +153,13 @@
                 <div class="extras">
                   <div class="orden">
                     <label for="camisa_evento">Camisa de la tienda 10 Bs<small>(promocion 7% dto.)</small></label>
-                    <input type="number" min="0" id="camisa_evento" name="pedido_camisas"size="3" placeholder="0">
+                    <input type="number" min="0" id="camisa_evento" name="pedido_extra[camisas][cantidad]"size="3" placeholder="0">
+                    <input type="hidden" value="10" name="pedido_extra[camisas][precio]">
                   </div><!--ORDEN-->
                   <div class="orden">
                     <label for="etiquetas">Paquete de 10 etiquetas 2 Bs<small>(HTML, CSS3, JavaScript)</small></label>
-                    <input type="number" min="0" id="etiquetas" size="3" name="pedido_etiquetas" placeholder="0">
+                    <input type="number" min="0" id="etiquetas" size="3" name="pedido_extra[etiquetas][cantidad]" placeholder="0">
+                    <input type="hidden" value="30" name="pedido_extra[etiquetas][precio]">
                   </div><!--ORDEN-->
                   <div class="orden">
                     <label for="regalo">Seleccione un regalo</label><br>
