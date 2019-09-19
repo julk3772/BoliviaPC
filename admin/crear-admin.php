@@ -1,4 +1,5 @@
 <?php 
+  include_once 'funciones/funciones.php';
   include_once 'templates/header.php';
   include_once 'templates/barra.php';
   include_once 'templates/navegacion.php';
@@ -37,11 +38,11 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="nombre">Nombre del Administrador</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1"  name="nombre" placeholder="Tu nombre completo">
+                  <input type="text" class="form-control" id="exampleInputEmail1"  name="nombre" placeholder="Tu nombre completo">
                 </div>
                 <div class="form-group">
                   <label for="usuario">Usuario</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1"  name="usuario" placeholder="Tu usuario de acceso">
+                  <input type="text" class="form-control" id="exampleInputEmail1"  name="usuario" placeholder="Tu usuario de acceso">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
@@ -53,7 +54,8 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Añadir</button>
+                <input type="hidden" name="agregar-admion" value="1">
+                <button type="submit" class="btn btn-primary" name="agregar-admin">Añadir</button>
               </div>
             </form>
         </div>
