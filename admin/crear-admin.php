@@ -38,15 +38,15 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="nombre">Nombre del Administrador</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1"  name="nombre" placeholder="Tu nombre completo">
+                  <input type="text" class="form-control" id="nombre"  name="nombre" placeholder="Tu nombre completo">
                 </div>
                 <div class="form-group">
                   <label for="usuario">Usuario</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1"  name="usuario" placeholder="Tu usuario de acceso">
+                  <input type="text" class="form-control" id="usuario"  name="usuario" placeholder="Tu usuario de acceso">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Crea tu Password">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Crea tu Password">
                 </div>
                 
                 

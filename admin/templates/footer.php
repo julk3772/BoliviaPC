@@ -18,8 +18,12 @@
 <script src="js/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="js/adminlte.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+<script src="js/admin-ajax.js"></script>
+
 <!-- AdminLTE for demo purposes -->
 <script src="js/demo.js"></script>
+
 <script>
   $(document).ready(function () {
     $('.sidebar-menu').tree()

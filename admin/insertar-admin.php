@@ -1,6 +1,7 @@
 <?php 
     include_once 'funciones/funciones.php';
         if(isset($_POST['agregar-admin'])) {
+            
             $usuario = $_POST['usuario'];
             $nombre = $_POST['nombre'];
             $password = $_POST['password'];
@@ -11,10 +12,26 @@
                 $stmt = $conn->prepare("INSERT INTO admins (usuario, nombre, password) VALUES(?, ?, ?)");
                 $stmt->bind_param("sss", $usuario, $nombre, $password_hashed);
                 $stmt->execute();
+                $id_registro = $stmt->insert_id;
+                if($stmt->affected_rows) {
+                    $respuesta = array(
+                        'respuesta' => 'exito',
+                        'id_admin' => $stmt
+                    );
+                    
+                }else {
+                    $respuesta = array(
+                        'respuesta' => 'error'
+                    );
+                }
                 $stmt->close();
                 $conn->close();            
             } catch(Exception $e) {
                 echo "Error: " . $e->getMessage();
             }
+            die(json_encode($respuesta));
         }
+    if(isset($_POST['login-admin'])) {
+        
+    }   
 ?>
