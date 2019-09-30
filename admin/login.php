@@ -1,4 +1,9 @@
-<?php 
+<?php
+  session_start();
+  
+  if(isset($_GET['cerrar_sesion'] ) ) {
+    session_destroy();
+   }
   include_once 'templates/header.php';
   include_once 'funciones/funciones.php';
 ?>
