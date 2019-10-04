@@ -84,7 +84,7 @@
             
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fas fa-list"></i>&nbsp Ver Todos</a></li>
+            <li><a href="lista-admin.php"><i class="fas fa-list"></i>&nbsp Ver Todos</a></li>
             <li><a href="crear-admin.php"><i class="fas fa-plus-circle"></i>&nbsp Agregar</a></li>            
           </ul>
         </li>

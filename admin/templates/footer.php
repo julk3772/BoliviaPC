@@ -21,13 +21,31 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 <script src="js/admin-ajax.js"></script>
 
-<!-- AdminLTE for demo purposes -->
-<script src="js/demo.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js" ></script>
+<script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script type="text/javascript" src="js/fastclick.js"></script>
+<script type="text/javascript" src="js/demo.js"></script>
 
+
+<!-- AdminLTE for demo purposes -->
 <script>
-  $(document).ready(function () {
-    $('.sidebar-menu').tree()
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
   })
 </script>
+
+
+
 </body>
 </html>
