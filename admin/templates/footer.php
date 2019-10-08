@@ -21,8 +21,8 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
 <script src="js/admin-ajax.js"></script>
 
-<script type="text/javascript" src="js/jquery.dataTables.min.js" ></script>
-<script type="text/javascript" src="js/dataTables.bootstrap.min.js"></script>
+
+
 <!-- SlimScroll -->
 <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
