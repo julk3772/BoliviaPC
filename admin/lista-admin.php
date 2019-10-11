@@ -12,8 +12,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Tables
-        <small>advanced tables</small>
+        Lista Administradores
+        <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -31,7 +31,7 @@
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
+              <h3 class="box-title">Maneja los usuarios en esta seccion</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -316,7 +316,19 @@
       'searching'   : false,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : false
+      'autoWidth'   : false,
+      'language' : {
+        paginate: {
+          next: 'Siguiente',
+          previous: 'Anteriol',
+          last: 'Ultimo',
+          first: 'Primero'
+        },
+        info: 'Mostrando _START_ a _END_ de _TOTAL_ resultados',
+        emptyTable: 'No hay registros',
+        infoEmpty: '0 Registros',
+        search: 'Buscar:'
+      }
     })
   })
 </script>
