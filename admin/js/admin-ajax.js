@@ -12,7 +12,7 @@ $(document).ready(function() {
                 if(resultado.respuesta == 'exito') {
                     swal(
                         'Correcto',
-                        'El administrador se creo correctamente',
+                        'El administrador se guardo correctamente',
                         'success'
                         )
                 } else {

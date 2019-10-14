@@ -32,13 +32,19 @@
             die(json_encode($respuesta));
         }
     if($_POST['registro'] == 'actualizar') {
-        $opciones = array(
-            'cost' => 12
-        );
+       
         try {
-            $hash_password = password_hash($password, PASSWORD_BCRYPT, $opciones);
-            $stmt = $conn->prepare('UPDATE admins SET usuario = ?, nombre = ?, password = ? WHERE id_admin = ? ');
-            $stmt->bind_param("sssi", $usuario, $nombre, $hash_password, $id_registro);
+            if(empty($_POST['password']) ) {
+                $stmt = $conn->prepare("UPDATE admins SET usuario = ?, nombre = ? WHERE id_admin = ? ");
+                $stmt->bind_param("ssi", $usuario, $nombre, $id_registro);
+            } else {
+                $opciones = array(
+                    'cost' => 12
+                );
+                $hash_password = password_hash($password, PASSWORD_BCRYPT, $opciones);
+                $stmt = $conn->prepare('UPDATE admins SET usuario = ?, nombre = ?, password = ? WHERE id_admin = ? ');
+                $stmt->bind_param("sssi", $usuario, $nombre, $hash_password, $id_registro);
+            }           
             $stmt->execute();
             if($stmt->affected_rows){
                 $respuesta = array(
