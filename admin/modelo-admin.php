@@ -35,14 +35,14 @@
        
         try {
             if(empty($_POST['password']) ) {
-                $stmt = $conn->prepare("UPDATE admins SET usuario = ?, nombre = ? WHERE id_admin = ? ");
+                $stmt = $conn->prepare("UPDATE admins SET usuario = ?, nombre = ? editado = NOW() WHERE id_admin = ? ");
                 $stmt->bind_param("ssi", $usuario, $nombre, $id_registro);
             } else {
                 $opciones = array(
                     'cost' => 12
                 );
                 $hash_password = password_hash($password, PASSWORD_BCRYPT, $opciones);
-                $stmt = $conn->prepare('UPDATE admins SET usuario = ?, nombre = ?, password = ? WHERE id_admin = ? ');
+                $stmt = $conn->prepare('UPDATE admins SET usuario = ?, nombre = ?, password = ? editado = NOW() WHERE id_admin = ? ');
                 $stmt->bind_param("sssi", $usuario, $nombre, $hash_password, $id_registro);
             }           
             $stmt->execute();
@@ -64,6 +64,9 @@
             );
         }
         die (json_encode($respuesta));   
+    }
+    if($_POST['registro'] == 'eliminar'){
+        
     }    
     if(isset($_POST['login-admin'])) {
        $usuario = $_POST['usuario'];
@@ -73,7 +76,7 @@
            $stmt = $conn->prepare("SELECT * FROM admins WHERE usuario =?;");
            $stmt->bind_param("s", $usuario);
            $stmt->execute();
-           $stmt->bind_results($id, $usuario, $nombre_admin, $password_admin);
+           $stmt->bind_results($id, $usuario, $nombre_admin, $password_admin, $editado);
            if($stmt->affected_rows) {
                $existe = $stmt->fetch();
                if($existe) {

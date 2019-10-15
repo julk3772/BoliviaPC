@@ -28,11 +28,12 @@
 <!-- FastClick -->
 <script type="text/javascript" src="js/fastclick.js"></script>
 <script type="text/javascript" src="js/demo.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 
 
 <!-- AdminLTE for demo purposes -->
 <script>
-  $(function () {
+  /*$(function () {
     $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
@@ -42,7 +43,7 @@
       'info'        : true,
       'autoWidth'   : false
     })
-  })
+  })*/
 </script>
 
 

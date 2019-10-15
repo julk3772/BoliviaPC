@@ -46,8 +46,13 @@
                   <input type="text" class="form-control" id="usuario"  name="usuario" placeholder="Tu usuario de acceso">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
+                  <label for="password">Password</label>
                   <input type="password" class="form-control" id="password" name="password" placeholder="Crea tu Password">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="repetir_password" name="repetir_password" placeholder="Repite tu password">
+                  <span id="resultado_password" class="help-block"></span>
                 </div>
                 
                 
@@ -56,7 +61,7 @@
 
               <div class="box-footer">
                 <input type="hidden" name="registro" value="nuevo">
-                <button type="submit" class="btn btn-primary" name="agregar-admin">Añadir</button>
+                <button type="submit" class="btn btn-primary" name="agregar-admin" id="crear_registro">Añadir</button>
               </div>
             </form>
         </div>
