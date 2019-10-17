@@ -28,6 +28,7 @@
 <!-- FastClick -->
 <script type="text/javascript" src="js/fastclick.js"></script>
 <script type="text/javascript" src="js/demo.js"></script>
+<script type="text/javascript" src="js/login-ajax.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 
 
