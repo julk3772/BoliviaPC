@@ -5,7 +5,7 @@
       <div class="user-panel">
         
         <div class="pull-left info">
-          <p>Evaristo Mamani</p>
+          <p><?php echo $_SESSION ['nombre'] ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
@@ -41,8 +41,8 @@
             <span>Eventos</span>            
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fas fa-list"></i>&nbsp Ver Todos</a></li>
-            <li><a href="#"><i class="fas fa-plus-circle"></i>&nbsp Agregar</a></li>            
+            <li><a href="lista-evento.php"><i class="fas fa-list"></i>&nbsp Ver Todos</a></li>
+            <li><a href="editar-evento.php"><i class="fas fa-plus-circle"></i>&nbsp Agregar</a></li>            
           </ul>
         </li>
         <li class="treeview">
@@ -77,6 +77,7 @@
             <li><a href="#"><i class="fas fa-plus-circle"></i>&nbsp Agregar</a></li>            
           </ul>
         </li>
+        <?php if($_SESSION['nivel'] == 1); { ?>
         <li class="treeview">
           <a href="#">
           <i class="fas fa-users-cog"></i>
@@ -88,6 +89,7 @@
             <li><a href="crear-admin.php"><i class="fas fa-plus-circle"></i>&nbsp Agregar</a></li>            
           </ul>
         </li>
+        <?php } ?>
         <li class="treeview">
           <a href="#">
           <i class="far fa-comments"></i>

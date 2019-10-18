@@ -7,7 +7,7 @@ if(isset($_POST['login-admin'])) {
         $stmt = $conn->prepare("SELECT * FROM admins WHERE usuario =?;");
         $stmt->bind_param("s", $usuario);
         $stmt->execute();
-        $stmt->bind_results($id, $usuario, $nombre_admin, $password_admin, $editado);
+        $stmt->bind_results($id, $usuario, $nombre_admin, $password_admin, $editado, $nivel);
         if($stmt->affected_rows) {
             $existe = $stmt->fetch();
             if($existe) {
@@ -15,6 +15,7 @@ if(isset($_POST['login-admin'])) {
                  session_start();
                  $_SESSION['usuario'] = $usuario_admin;
                  $_SESSION['nombre'] = $nombre_admin;
+                 $_SESSION['nivel'] = $nivel;
                  $respuesta = array(
                         'respuesta' => 'exitoso',
                         'usuario' => $usuario
