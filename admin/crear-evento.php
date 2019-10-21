@@ -41,10 +41,51 @@
                   <label for="nombre">Titulo del Evento</label>
                   <input type="text" class="form-control" id="nombre"  name="nombre" placeholder="Usuario">
                 </div>
+                
                 <div class="form-group">
-                  <label for="usuario">Usuario</label>
-                  <input type="text" class="form-control" id="usuario"  name="usuario" placeholder="Tu usuario de acceso">
+                  <label for="usuario">Categoria:</label>
+                  <select name="categoria_evento" class="form-control seleccionar">
+                    <option value="0">- Seleccione -</option>
+                    <?php 
+                      try {
+                            $sql = "SELECT * FROM categoria_evento";
+                            $resultado = $conn->query($sql);
+                            while($cat_evento = $resultado->fetch_assoc()) { ?>
+                                <option value="<?php echo $cat_evento['id_categoria']; ?>"> 
+                                  <?php echo $cat_evento['cat_evento'];?>
+                                </option>
+                         <?php   }
+                      } catch (Exception $e) {
+                        echo "Error:" . $e->getMessage();
+                      }
+                    ?>
+                  </select>
                 </div>
+                <div class="form-group">
+                  <label>Fecha del evento:</label>
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="seleccionar" name="fecha_evento">
+                  </div>
+                  <!-- /.input group -->
+              </div>
+              <div class="bootstrap-timepicker">
+                <div class="form-group">
+                  <label>Hora del evento:</label>
+
+                  <div class="input-group">
+                    <input type="text" class="form-control timepicker">
+
+                    <div class="input-group-addon">
+                      <i class="fa fa-clock-o"></i>
+                    </div>
+                  </div>
+                  <!-- /.input group -->
+                </div>
+                <!-- /.form group -->
+              </div>
                 <div class="form-group">
                   <label for="password">Password</label>
                   <input type="password" class="form-control" id="password" name="password" placeholder="Crea tu Password">

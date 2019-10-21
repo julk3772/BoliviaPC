@@ -25,7 +25,12 @@
   <link rel="stylesheet" href="css/admin.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css">
   <link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
-
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="css/select2.min.css">
+  <!-- Bootstrap time Picker -->
+  <link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
