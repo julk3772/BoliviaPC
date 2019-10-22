@@ -76,8 +76,7 @@
                   <label>Hora del evento:</label>
 
                   <div class="input-group">
-                    <input type="text" class="form-control timepicker">
-
+                    <input type="text" class="form-control timepicker" name="hora_evento"> 
                     <div class="input-group-addon">
                       <i class="fa fa-clock-o"></i>
                     </div>
@@ -86,15 +85,26 @@
                 </div>
                 <!-- /.form group -->
               </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Crea tu Password">
-                </div>
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" class="form-control" id="repetir_password" name="repetir_password" placeholder="Repite tu password">
-                  <span id="resultado_password" class="help-block"></span>
-                </div>
+              <div class="form-group">
+                  <label for="usuario">Invitado o Poniente:</label>
+                  <select name="invitado" class="form-control seleccionar">
+                    <option value="0">- Seleccione -</option>
+                    <?php 
+                      try {
+                            $sql = "SELECT invitado_id, nombre_invitado, apellido_invitado FROM invitados";
+                            $resultado = $conn->query($sql);
+                            while($invitados = $resultado->fetch_assoc()) { ?>
+                                <option value="<?php echo $invitados['invitado_id']; ?>"> 
+                                  <?php echo $invitados['nombre_invitado'] ." ". $invitados['apellido_invitado'];?>
+                                </option>
+                         <?php   }
+                      } catch (Exception $e) {
+                        echo "Error:" . $e->getMessage();
+                      }
+                    ?>
+                  </select>
+                </div> 
+               
                 
                 
               </div>
