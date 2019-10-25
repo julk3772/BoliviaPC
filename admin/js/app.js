@@ -18,10 +18,10 @@ $(document).ready(function() {
 //Date picker
 $('#fecha').datepicker({
     autoclose: true
-  })
+  });
 //Initialize Select2 Elements
-$('.seleccionar').select2() 
+$('.seleccionar').select2() ;
  //Timepicker
  $('.timepicker').timepicker({
     showInputs: false
-  })
+  });

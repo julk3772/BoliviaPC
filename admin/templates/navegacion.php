@@ -48,11 +48,11 @@
         <li class="treeview">
           <a href="#">
             <i class="fas fa-book"></i>
-            <span>Categoria Eventos</span>            
+            <span>Categoria de Eventos</span>            
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fas fa-list"></i>&nbsp Ver Todos</a></li>
-            <li><a href="#"><i class="fas fa-plus-circle"></i>&nbsp Agregar</a></li>            
+            <li><a href="lista-categoria.php"><i class="fas fa-list"></i>&nbsp Ver Todos</a></li>
+            <li><a href="crear-categoria.php"><i class="fas fa-plus-circle"></i>&nbsp Agregar</a></li>            
           </ul>
         </li>
         <li class="treeview">

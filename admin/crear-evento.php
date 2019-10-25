@@ -30,16 +30,14 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">Aqui se crea los eventos</h3>
-
-          
+          <h3 class="box-title">Aqui se crea los eventos</h3>          
         </div>
         <div class="box-body">
         <form role="form" name="guardar-registro" id="guardar-registro" method="POST" action="modelo-evento.php"> 
               <div class="box-body">
                 <div class="form-group">
                   <label for="nombre">Titulo del Evento</label>
-                  <input type="text" class="form-control" id="nombre"  name="nombre" placeholder="Usuario">
+                  <input type="text" class="form-control" id="nombre"  name="titulo_evento" placeholder="Titulo del Evento">
                 </div>
                 
                 <div class="form-group">

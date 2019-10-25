@@ -49,6 +49,7 @@ $(document).ready(function() {
                     },
                     url: 'modelo-'+tipo+'.php',
                     success:function(data) {
+                        console.log(dataa);
                         var resultado = JSON.parse(data);
                         if(resultado.respuesta == 'exito') {
                             swal(

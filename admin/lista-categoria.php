@@ -12,8 +12,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Lista de Eventos
-        <small>Aqui se administra los eventos</small>
+        Lista de Categorias
+        <small>Aqui se administra las categorias</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -31,58 +31,44 @@
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Maneja los usuarios en esta seccion</h3>
+              <h3 class="box-title">Maneja las categorias en esta seccion</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Usuario</th>
-                  <th>Fecha</th>
-                  <th>Hora</th>
-                  <th>Categoria</th>                  
-                  <th>Invitado</th>
+                  <th>Nombre de la Categoria</th>
+                  <th>Icono</th>
                   <th>Acciones</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php 
                   try {
-                    $sql = " SELECT evento_id, nombre_evento, fecha_evento, hora_evento, cat_evento, nombre_invitado, apellido_invitado ";
-                    $sql .= " FROM eventos ";
-                    $sql .= " INNER JOIN categoria_evento ";
-                    $sql .= " ON eventos.id_cat_evento=categoria_evento.id_categoria ";
-                    $sql .= " INNER JOIN invitados ";
-                    $sql .= " ON eventos.id_inv=invitados.invitado_id ";
-                    $sql .= " ORDER BY evento_id ";
+                    $sql = " SELECT * FROM categoria_evento";
                     $resultado = $conn->query($sql);
                   } catch (Exception $e) {
                     $error = $e->getMessage();
                     echo $error;
                   }
-                  while($eventos = $resultado->fetch_assoc() ){ ?>
+                  while($categoria = $resultado->fetch_assoc() ){ ?>
                     <tr>
-                      <td><?php echo $eventos['nombre_evento']; ?></td>
-                      <td><?php echo $eventos['fecha_evento']; ?></td>
-                      <td><?php echo $eventos['hora_evento']; ?></td>
-                      <td><?php echo $eventos['cat_evento']; ?></td>
-                      <td><?php echo $eventos['nombre_invitado'] . " ". $eventos['apellido_invitado']; ?></td>                   
+                      <td><?php echo $categoria['cat_evento']; ?></td>
+                      <td><i class="fa <?php echo $categoria['icono']; ?>"></i></td>                                     
                       <td>
-                        <a href="editar-evento.php?id=<?php echo $eventos['evento_id']; ?>" type="button" class="btn bg-orange btn-flat margin"> <i class="fa fa-pencil" aria-hidden="true"></i></a>
-                        <a href="#" data-id="<?php echo $eventos['evento_id']; ?>" data-tipo="evento" type="button" class="btn bg-maroon btn-flat margin borrar_registro"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                        <a href="editar-evento.php?id=<?php echo $categoria['id_categoria']; ?>" type="button" class="btn bg-orange btn-flat margin"> <i class="fa fa-pencil" aria-hidden="true"></i></a>
+                        <a href="#" data-id="<?php echo $categoria['id_categoria']; ?>" data-tipo="categoria" type="button" class="btn bg-maroon btn-flat margin borrar_registro"><i class="fa fa-trash" aria-hidden="true"></i></a>
                       </td>                      
                     </tr>
                 <?php  }  ?>
                 </tbody>
                 <tfoot>
                 <tr>
-                <th>Usuario</th>
-                  <th>Fecha</th>
-                  <th>Hora</th>
-                  <th>Categoria</th>                  
-                  <th>Invitado</th>
-                  <th>Acciones</th>                
+                  <th>Nombre de la Categoria</th>
+                  <th>Icono</th>
+                  <th>Acciones</th>
+                                  
                 </tr>
                 </tfoot>
               </table>
