@@ -24,4 +24,6 @@ $('.seleccionar').select2() ;
  //Timepicker
  $('.timepicker').timepicker({
     showInputs: false
-  });
+ });
+ //Icono picker
+ $('#icono').iconpicker();

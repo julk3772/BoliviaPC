@@ -30,6 +30,7 @@
 <script type="text/javascript" src="js/demo.js"></script>
 <script type="text/javascript" src="js/login-ajax.js"></script>
 <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="js/fontawesome-iconpicker.min.js"></script>
 <!-- Select2 -->
 <script src="js/select2.full.min.js"></script>
 <!-- bootstrap time picker -->
