@@ -33,6 +33,9 @@
   <link rel="stylesheet" href="css/bootstrap-timepicker.min.css">
   <!-- Bootstrap Icon Picker -->
   <link rel="stylesheet" href="css/fontawesome-iconpicker.min.css">
+   <!-- Bootstrap Icheck -->
+   <link rel="stylesheet" href="css/icheck.css">
+   
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>

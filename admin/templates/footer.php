@@ -36,7 +36,7 @@
 <!-- bootstrap time picker -->
 <script src="js/bootstrap-timepicker.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
-
+<script type="text/javascript" src="js/icheck.min.js"></script>
 
 
 <!-- AdminLTE for demo purposes -->
