@@ -38,7 +38,9 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/icheck.min.js"></script>
 
-
+<!-- Morris.js charts -->
+<script src="js/raphael.min.js"></script>
+<script src="js/morris.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script>
   /*$(function () {

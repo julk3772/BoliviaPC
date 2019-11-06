@@ -34,8 +34,11 @@
   <!-- Bootstrap Icon Picker -->
   <link rel="stylesheet" href="css/fontawesome-iconpicker.min.css">
    <!-- Bootstrap Icheck -->
-   <link rel="stylesheet" href="css/icheck.css">
-   
+  <link rel="stylesheet" href="css/icheck.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <!-- Morris charts -->
+  <link rel="stylesheet" href="css/morris.css"> 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>

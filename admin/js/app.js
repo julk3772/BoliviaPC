@@ -1,34 +1,69 @@
 $(document).ready(function() {
-    $('#crear_registro_admin').attr('disabled', true);
-    $('#repetir_password').on('input', function() {
-        var password_nuevo = $('#password').val();
-        if($(this).val() == password_nuevo) {
-            $('#resultado_password').text('Correcto');
-            $('#resultado_password').parents('.form-group').addClass('has-success').removeClass('has-error');
-            $('input#password').parents('.form-group').addClass('has-success').removeClass('has-error');
-            $('#crear_registro_admin').attr('disabled', false);
-        } else {
-            $('#resultado_password').text('No son iguales!');
-            $('#resultado_password').parents('.form-group').addClass('has-error').removeClass('has-success');
-            $('input#password').parents('.form-group').addClass('has-error').removeClass('has-success');
-        }
-    });
 
+
+            $('.select2').select2();       
+
+            $('#datepicker').datepicker({
+                autoclose: true
+            });
+
+            $('.timepicker').timepicker({
+                showInputs: false
+            });
+
+            
+            
+        
+            $('#registros').DataTable({
+                'paging'      : true,
+                'lengthChange': false,
+                'searching'   : false,
+                'ordering'    : true,
+                'info'        : true,
+                'autoWidth'   : false,
+                'pageLength'  : 10,
+                'language': {
+                    paginate: {
+                      next: 'Siguiente', // or '→'
+                      previous: 'Anterior' // or '←' 
+                    },
+                    info: "Mostrando _START_ a _END_ de _TOTAL_ resultados"
+                  }
+            });
+
+            
+
+            $('input#password_repetir').on('input', function() {
+                    var password_nuevo = $('input#password').val();
+
+                    if( $(this).val() == password_nuevo ) {
+                        $('#resultado_password').text('Correcto');
+                        $('#resultado_password').parents('.form-group').addClass('has-success').removeClass('has-error');
+                        $('input#password').parents('.form-group').addClass('has-success').removeClass('has-error');
+                    } else {
+                        $('#resultado_password').text('Los Passwords no son iguales');
+                        $('#resultado_password').parents('.form-group').addClass('has-error').removeClass('has-success');
+                        $('input#password').parents('.form-group').addClass('has-error').removeClass('has-success');
+                    }
+            });
+  
+
+            $('#icono').iconpicker();
+        
+             // LINE 
+             
+            $.getJSON('servicio-registrados.php', function( data ){
+                console.log(data);
+                var line = new Morris.Line({
+                    element: 'grafica-registros',
+                    resize: true,
+                    data: data,
+                    xkey: 'fecha',
+                    ykeys: ['cantidad'],
+                    labels: ['Registrados'],
+                    lineColors: ['#3c8dbc'],
+                    hideHover: 'auto'
+                });
+            });
+  
 });
-//Date picker
-$('#fecha').datepicker({
-    autoclose: true
-  });
-//Initialize Select2 Elements
-$('.seleccionar').select2() ;
- //Timepicker
- $('.timepicker').timepicker({
-    showInputs: false
- });
- //Icono picker
- $('#icono').iconpicker();
- //iCheck for checkbox and radio inputs
- $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-    checkboxClass: 'icheckbox_minimal-blue',
-    radioClass   : 'iradio_minimal-blue'
-  })
