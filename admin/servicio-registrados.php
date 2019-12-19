@@ -3,7 +3,7 @@ include_once 'funciones/funciones.php';
 include_once 'funciones/sesion.php';
 
 
-$sql = " SELECT fecha_registro, COUNT(*) as resultado from registrados group by DATE(fecha_registro) order by fecha_registro ";
+$sql = " SELECT fecha_registro, COUNT(*) as resultado from registrados group by (fecha_registro) order by fecha_registro ";
 $resultado = $conn->query($sql);
 
 $arreglo_registros = array();
